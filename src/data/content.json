@@ -1,0 +1,22 @@
+{
+    "brand": {
+        "name": "Koolfe",
+        "tagline": "Premium Artisan Kulfi in Kuwait"
+    },
+    "hero": {
+        "title": {
+            "prefix": "Indulge in",
+            "highlight": "Pure Tradition"
+        },
+        "description": "Handcrafted kulfi using centuries-old recipes. Experience the authentic taste of royalty.",
+        "buttons": {
+            "explore": "Explore Flavors",
+            "order": "Order via WhatsApp"
+        }
+    },
+    "products": {
+        "section_title": "Signature Flavors",
+        "section_highlight": "Our Masterpieces",
+        "description": "Slow-cooked to creamy perfection, made fresh daily with authentic ingredients."
+    }
+}

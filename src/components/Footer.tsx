@@ -11,11 +11,11 @@ const footerLinks = [
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const handleClick = (href: string) => {
-    const element = document.getElementById(href.slice(1));
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    element?.scrollIntoView({ behavior: "smooth" });
+    window.history.pushState(null, "", href);
   };
 
   return (
@@ -41,19 +41,20 @@ export const Footer = () => {
             <ul className="flex flex-wrap justify-center gap-6">
               {footerLinks.map((link) => (
                 <li key={link.href}>
-                  <button
-                    onClick={() => handleClick(link.href)}
+                  <a
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
                     className="text-white/70 hover:text-brand-yellow transition-colors text-sm"
                   >
                     {link.label}
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>
           </nav>
 
           {/* Social / Contact */}
-          <div className="text-center md:text-right">
+          <div className="text-center md:text-right flex flex-col gap-2">
             <a
               href={`https://instagram.com/${brandInfo.instagram.replace("@", "")}`}
               target="_blank"
@@ -61,6 +62,12 @@ export const Footer = () => {
               className="text-white/70 hover:text-brand-yellow transition-colors text-sm"
             >
               {brandInfo.instagram}
+            </a>
+            <a
+              href="tel:+96556571366"
+              className="text-white/70 hover:text-brand-yellow transition-colors text-sm"
+            >
+              +965 5657 1366
             </a>
           </div>
         </div>

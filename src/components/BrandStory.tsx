@@ -27,9 +27,10 @@ export const BrandStory = () => {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-elevated">
                 <img
-                  src={brandStoryImage}
-                  alt="Traditional kulfi making process"
-                  className="w-full h-auto object-cover"
+                  src="https://images.unsplash.com/photo-1534432182912-63863115e106?q=80&w=987&auto=format&fit=crop"
+                  alt="Kulfi preparation ingredients - pistachio and saffron"
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
                 />
               </div>
               {/* Decorative elements */}

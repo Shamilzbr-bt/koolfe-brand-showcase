@@ -7,13 +7,14 @@
 @layer base {
   :root {
     /* Royal Purple & Gold Palette */
-    --background: 270 20% 98%; /* Very light lavender tint */
-    --foreground: 270 40% 15%; /* Deep purple-black text */
+    /* Royal Purple & Gold Palette - v2 (Deep Plum) */
+    --background: 285 30% 98%; /* Warm lavender tint */
+    --foreground: 285 60% 10%; /* Very dark deep plum */
 
     --card: 0 0% 100%;
     --card-foreground: 270 40% 15%;
 
-    --primary: 270 60% 20%; /* Deep Regal Purple */
+    --primary: 285 70% 20%; /* Deep Velvet Purple from hero bg */
     --primary-foreground: 45 50% 95%; /* Cream */
 
     --secondary: 270 20% 96%;
@@ -22,8 +23,8 @@
     --muted: 270 10% 90%;
     --muted-foreground: 270 10% 40%;
 
-    --accent: 45 80% 55%; /* Rich Gold */
-    --accent-foreground: 270 40% 15%;
+    --accent: 42 90% 55%; /* Golden Yellow from hero accents */
+    --accent-foreground: 285 60% 10%;
 
     --border: 270 10% 90%;
     --input: 270 10% 90%;

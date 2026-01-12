@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  # Development service with hot reload
+  app-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: koolfe-dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - VITE_SUPABASE_PROJECT_ID=${VITE_SUPABASE_PROJECT_ID}
+      - VITE_SUPABASE_PUBLISHABLE_KEY=${VITE_SUPABASE_PUBLISHABLE_KEY}
+      - VITE_SUPABASE_URL=${VITE_SUPABASE_URL}
+    env_file:
+      - .env
+    networks:
+      - koolfe-network
+    restart: unless-stopped
+
+  # Production service
+  app-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: koolfe-prod
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - koolfe-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+networks:
+  koolfe-network:
+    driver: bridge

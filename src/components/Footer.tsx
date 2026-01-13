@@ -19,7 +19,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-brand-purple-dark text-white py-12">
+    <footer className="bg-primary text-white py-12">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo & Tagline */}
@@ -44,7 +44,7 @@ export const Footer = () => {
                   <a
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className="text-white/70 hover:text-brand-yellow transition-colors text-sm"
+                    className="text-white/70 hover:text-accent transition-colors text-sm"
                   >
                     {link.label}
                   </a>
@@ -59,13 +59,13 @@ export const Footer = () => {
               href={`https://instagram.com/${brandInfo.instagram.replace("@", "")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/70 hover:text-brand-yellow transition-colors text-sm"
+              className="text-white/70 hover:text-accent transition-colors text-sm"
             >
               {brandInfo.instagram}
             </a>
             <a
               href="tel:+96556571366"
-              className="text-white/70 hover:text-brand-yellow transition-colors text-sm"
+              className="text-white/70 hover:text-accent transition-colors text-sm"
             >
               +965 5657 1366
             </a>

@@ -6,6 +6,7 @@ import {
   SheetContent,
   SheetTrigger,
   SheetTitle,
+  SheetDescription,
 } from "@/components/ui/sheet";
 import { brandInfo, getWhatsAppLink } from "@/data/products";
 import logo from "@/assets/koolfe-logo.jpg";
@@ -101,13 +102,16 @@ export const Header = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-full sm:w-[300px] border-l-0" id="mobile-menu">
               <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
+              <SheetDescription className="sr-only">
+                Navigation menu for mobile devices
+              </SheetDescription>
               <div className="flex flex-col items-center justify-center h-full gap-8 p-8">
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className="font-display text-4xl text-primary font-bold hover:text-accent transition-colors"
+                    className="font-display text-3xl text-primary font-bold hover:text-accent transition-colors"
                   >
                     {link.label}
                   </a>

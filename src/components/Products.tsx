@@ -3,6 +3,7 @@ import { getWhatsAppLink, type Product } from "@/data/products";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { ArrowRight, Loader2 } from "lucide-react";
 import { useProducts } from "@/hooks/use-products";
+import content from "@/data/content.json";
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
@@ -42,8 +43,6 @@ const ProductCard = ({ product }: { product: Product }) => {
     </div>
   );
 };
-
-import content from "../data/content.json";
 
 export const Products = () => {
   const { data: products, isLoading, error } = useProducts();

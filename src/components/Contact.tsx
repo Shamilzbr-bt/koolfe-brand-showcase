@@ -35,7 +35,7 @@ const contactItems = [
 
 export const Contact = () => {
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="section py-20">
       <div className="container-custom">
         {/* Section Header */}
         <AnimatedSection className="text-center mb-16">

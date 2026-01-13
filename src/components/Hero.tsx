@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { getWhatsAppLink } from "@/data/products";
-import heroImage from "@/assets/hero-bg-v2.jpg";
 import content from "@/data/content.json";
 
 export const Hero = () => {
@@ -12,10 +11,6 @@ export const Hero = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with Zoom Effect */}
       <div className="absolute inset-0 z-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-zoom-slow"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/40 to-background/90" />
       </div>
 
